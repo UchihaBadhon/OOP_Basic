@@ -5,10 +5,15 @@ import java.util.Scanner;
 class Student{
     int age;
     String name;
+    //Static method. It doesnt require object for calling. It can be called by using class_name.method()
+   public static void display(){
+        System.out.println("Your work has done");
+    }
 
     Student(){
         System.out.println("Constructor called!!");
     }
+    //non-static method. It can work only by object creation.
     public void printInfo(){
         System.out.println("Age is: " +this.age);
         System.out.println("Name is: " +this.name);
@@ -17,23 +22,25 @@ class Student{
         this.age = age;
         this.name = name;
     }
+
 }
 
 public class Main {
 
     public static void main(String[] args) {
        Scanner in = new Scanner(System.in);
-        Student s1 = new Student();// non-parameter constructor
+       // Student s1 = new Student();// non-parameter constructor
        Student s2 = new Student(); // taking input from user
        Student s3 = new Student( 40, "robi");//parameterised constructor
-       s1.age = 20;
-       s1.name = "King";
+      // s1.age = 20;
+      // s1.name = "King";
        s2.age = in.nextInt();
        in.nextLine();
        s2.name = in.nextLine();
 
-       s1.printInfo();
-       s2.printInfo();
+      // s1.printInfo();
+       s2.printInfo(); //non-static method calling by creating object
        s3.printInfo();
+       Student.display(); // static method calling
     }
 }
