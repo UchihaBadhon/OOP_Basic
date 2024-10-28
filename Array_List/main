@@ -1,0 +1,22 @@
+package org.example;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+      //ArrayList<Data_type>Array_name = new Arraylist<>();
+      ArrayList<Integer>number = new ArrayList<>();
+      // to add elements
+      number.add(10);
+      number.add(20);
+      number.add(30);
+      number.add(40);
+        System.out.println("Numbers are: " +number);
+    }
+}
+/*
+output:
+Numbers are: [10, 20, 30, 40]
+*/
