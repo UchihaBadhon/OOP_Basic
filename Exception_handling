@@ -1,0 +1,46 @@
+package org.example;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        //arithmetic
+
+        try {
+            int a, b, res;
+            a = 10;
+            b = 0;
+            res = a / b;
+        }
+        catch ( ArithmeticException e ){
+            System.out.println("This is arrithemtic exception: " +e);
+        }
+        finally {
+            System.out.println("this topic name is exception Handling!!");
+        }
+
+        // array out of bounds
+
+        try {
+            int[] a = new int[5];
+            a[5] = 23;
+        }
+        catch (ArrayIndexOutOfBoundsException a){
+            System.out.println("This is Array index problem: " +a);
+        }
+        finally {
+            System.out.println("Problem solved");
+        }
+
+        //Null pointer
+        try {
+            String str = null;
+            System.out.println("String will be: " +str.length());
+        }
+        catch (NullPointerException n ){
+            System.out.println("This is null pointer exception!");
+        }
+
+
+    }
+}
