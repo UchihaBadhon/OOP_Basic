@@ -1,22 +1,63 @@
 package org.example;
 
+import java.util.Iterator;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-      //ArrayList<Data_type>Array_name = new Arraylist<>();
-      ArrayList<Integer>number = new ArrayList<>();
-      // to add elements
-      number.add(10);
-      number.add(20);
-      number.add(30);
-      number.add(40);
-        System.out.println("Numbers are: " +number);
+        ArrayList<Integer> arr = new ArrayList<>();
+       arr.add(10);
+       arr.add(20);
+       arr.add(30);
+       arr.add(2,10);// to insert a value in an index, not set
+        System.out.println(arr);
+        System.out.println("size: " +arr.size());
+        
+        //for each loop
+        for ( int i : arr ){
+            System.out.print(" " +i );
+        }
+        System.out.println("\n");
+        
+        //iterator
+        Iterator it = arr.iterator();
+        while( it.hasNext() ){
+            System.out.print(" " +it.next() );
+        }
+        
+        //remove
+        arr.remove(1); //ArrayList_name.remove(index)
+        System.out.print("After remove: ");
+        System.out.println(arr);
+        
+        //to erase the whole array
+        //arr.erase();
+        
+        //to check the array is empty or not
+        boolean check = arr.isEmpty();
+        System.out.println("Array is empty: "+check);
+        //to find the value is present or not
+        boolean che = arr.contains(90);
+        System.out.println("Contains: "+che);
+        
+        //to replace the value
+        arr.set(0, 87);
+        System.out.println(arr);
+        //to get the value from the index
+        int num = arr.get(0);
+        System.out.println("Number is: " +num );
+        
+
     }
 }
-/*
-output:
-Numbers are: [10, 20, 30, 40]
-*/
+
+//output
+[10, 20, 10, 30]
+size: 4
+ 10 20 10 30
+
+ 10 20 10 30After remove: [10, 10, 30]
+Array is empty: false
+Contains: false
+[87, 10, 30]
+Number is: 87
