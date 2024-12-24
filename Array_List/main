@@ -24,6 +24,12 @@ public class Main {
         while( it.hasNext() ){
             System.out.print(" " +it.next() );
         }
+
+//print value using loop & get method
+        System.out.println("Values are:");
+        for( int i = 0; i < arr.size(); i++ ){
+            System.out.println(" "+arr.get(i));
+        }
         
         //remove
         arr.remove(1); //ArrayList_name.remove(index)
