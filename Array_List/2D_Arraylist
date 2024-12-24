@@ -1,0 +1,32 @@
+package org.example;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String>books = new ArrayList();
+        books.add("Discrete");
+        books.add("MorrisManu");
+        books.add("Sherlock");
+        
+        ArrayList<String>pens = new ArrayList();
+        pens.add("Matador");
+        pens.add("All time");
+        pens.add("Pin Point");
+        
+        ArrayList<String>pencils = new ArrayList();
+        pencils.add("Apsara");
+        pencils.add("Marko");
+        pencils.add("Lombart");
+        
+        ArrayList<ArrayList<String>>stationary = new ArrayList();
+        stationary.add(books);
+        stationary.add(pens);
+        stationary.add(pencils);
+        
+        System.out.println(stationary);
+
+    }
+}
+
+//Output
+[[Discrete, MorrisManu, Sherlock], [Matador, All time, Pin Point], [Apsara, Marko, Lombart]]
