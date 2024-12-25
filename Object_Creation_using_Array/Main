@@ -1,0 +1,26 @@
+package org.example;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Food[] records = new Food[4];
+        Scanner in = new Scanner(System.in);
+        for ( int i = 0; i < 4; i++ ){
+            System.out.println("Enter your age: ");
+            int age;
+            age = in.nextInt();
+            in.nextLine();
+            System.out.println("Enter your name: ");
+            String nme = in.nextLine();
+            records[i] = new Food(age, nme);
+                    
+        }
+        
+        for(int i = 0; i < 4; i++ ){
+            System.out.println("Name: " +records[i].name);
+            System.out.println("Age: "+records[i].age);
+            System.out.print("\n");
+        }
+
+    }
+}
